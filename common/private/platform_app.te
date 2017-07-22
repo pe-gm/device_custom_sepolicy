@@ -17,3 +17,7 @@ allow platform_app cache_file:lnk_file r_file_perms;
 allow platform_app ota_package_file:file create_file_perms;
 allow platform_app ota_package_file:dir rw_dir_perms;
 allow platform_app recovery_service:service_manager find;
+
+# MatLog calls dmesg
+allow platform_app kernel:system syslog_read;
+
